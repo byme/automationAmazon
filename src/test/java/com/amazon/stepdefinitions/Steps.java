@@ -30,15 +30,17 @@ public class Steps {
     public void searches_for_alexa() throws InterruptedException {
         driver.findElement(By.xpath("//*[@id=\"twotabsearchtextbox\"]")).sendKeys("Alexa");
         driver.findElement(By.xpath("//*[@id=\"nav-search-submit-button\"]")).submit();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
     }
     @Given("navigates to the second page")
-    public void navigates_to_the_second_page() {
-        System.out.println("navigates");
+    public void navigates_to_the_second_page() throws InterruptedException {
+        driver.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[1]/div/span[3]/div[2]/div[28]/div/div/span/a[1]")).click();
+        Thread.sleep(5000);
     }
     @Given("selects the third item")
-    public void selects_the_third_item() {
-        System.out.println("selects");
+    public void selects_the_third_item() throws InterruptedException {
+        driver.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[1]/div/span[3]/div[2]/div[4]\n")).click();
+        Thread.sleep(3000);
     }
     @Then("assert that the item would be available for purchase")
     public void assert_that_the_item_would_be_available_for_purchase() {
