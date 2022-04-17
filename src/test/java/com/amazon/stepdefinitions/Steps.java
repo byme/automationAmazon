@@ -42,7 +42,7 @@ public class Steps {
     public void searches_for_alexa() throws InterruptedException {
         driver.findElement(By.xpath("//*[@id=\"twotabsearchtextbox\"]")).sendKeys("Alexa");
         driver.findElement(By.xpath("//*[@id=\"nav-search-submit-button\"]")).submit();
-       
+
     }
     @Given("navigates to the second page")
     public void navigates_to_the_second_page() throws InterruptedException {
@@ -69,8 +69,8 @@ public class Steps {
         assertEquals("Disponible.",result);
     }
 
-//    @After()
-//    public void finish(){
-//        driver.quit();
-//    }
+    @After()
+    public void finish(){
+        driver.quit();
+    }
 }
