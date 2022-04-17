@@ -1,0 +1,15 @@
+/target/
+/.metadata/
+/.scannerwork/
+*.exe
+*.sh
+/.idea/
+.project
+/.settings/
+*.iml
+*.log
+.classpath
+/build/
+/history
+.DS_Store
+/bin
